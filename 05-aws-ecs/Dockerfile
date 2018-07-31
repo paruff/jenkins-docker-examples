@@ -1,10 +1,10 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 
 # install jenkins plugins
 COPY jenkins-home/plugins.txt $JENKINS_REF/
-RUN /usr/local/bin/install-plugins.sh $JENKINS_REF/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < $JENKINS_REF/plugins.txt
 
 ENV JAVA_OPTS -Dorg.eclipse.jetty.server.Request.maxFormContentSize=100000000 \
  			  -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/Los_Angeles \
