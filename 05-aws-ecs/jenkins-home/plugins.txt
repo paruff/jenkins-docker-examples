@@ -1,5 +1,5 @@
-amazon-ecs:1.11
-aws-credentials:1.21
+amazon-ecs:1.609
+aws-credentials:1.23
 aws-java-sdk:1.11.119
 bouncycastle-api:2.16.0
 cloudbees-folder:6.1.0
