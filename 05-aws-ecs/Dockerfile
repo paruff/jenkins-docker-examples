@@ -1,9 +1,9 @@
-FROM jenkins/jenkins:lts-alpine
+FROM jenkins/jenkins:lts
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 
-RUN apk update 
-# RUN apk upgrade 
+RUN apt-get update && \
+	 apk upgrade 
 # RUN apk add git  
 # RUN apk add docker
 
