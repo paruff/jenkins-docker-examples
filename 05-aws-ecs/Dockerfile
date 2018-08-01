@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:lts-alpine
 
-RUN yum update
+RUN apk update
 #	yum upgrade 
 # RUN apk add git  
 # RUN apk add docker
