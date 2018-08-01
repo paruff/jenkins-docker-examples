@@ -2,10 +2,10 @@ FROM jenkins/jenkins:lts-alpine
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 
-# RUN sudo apk update 
+RUN apk update 
 # RUN apk upgrade 
-RUN apk add git  
-RUN apk add docker
+# RUN apk add git  
+# RUN apk add docker
 
 # install jenkins plugins
 COPY jenkins-home/plugins.txt $JENKINS_REF/
