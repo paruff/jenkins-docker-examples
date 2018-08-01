@@ -1,11 +1,11 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts-alpine
 
-ENV JENKINS_REF /usr/share/jenkins/ref
-
-RUN yum update && \
-	yum upgrade 
+RUN yum update
+#	yum upgrade 
 # RUN apk add git  
 # RUN apk add docker
+
+ENV JENKINS_REF /usr/share/jenkins/ref
 
 # install jenkins plugins
 COPY jenkins-home/plugins.txt $JENKINS_REF/
