@@ -2,8 +2,8 @@ FROM jenkins/jenkins:lts
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 
-RUN apt-get update && \
-	 apk upgrade 
+RUN sudo apt-get update && \
+	 sudo apt-get upgrade 
 # RUN apk add git  
 # RUN apk add docker
 
