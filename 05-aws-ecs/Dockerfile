@@ -2,7 +2,7 @@ FROM jenkins/jenkins:lts-alpine
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 
-RUN apk update 
+RUN sudo apk update 
 RUN apk upgrade 
 RUN apk add git  
 RUN apk add docker
